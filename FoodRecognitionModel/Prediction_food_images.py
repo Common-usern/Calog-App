@@ -32,7 +32,7 @@ def predict_class(model, images, show = True):
         plt.imshow(img[0])                           
         plt.axis('off')
         plt.title(pred_value)
-        plt.show()
+        plt.savefig('prediction.png')
 
 #add the images you want to predict into a list
 images = []
