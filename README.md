@@ -14,7 +14,7 @@ UI:
 
     ![camera](https://user-images.githubusercontent.com/69532082/200303664-86241b37-34b7-4bca-b19d-42e8616ab232.png)
 
-4. Calorie Measirements
+4. Calorie Measurements
 
     ![result](https://user-images.githubusercontent.com/69532082/200303686-7d72ccd9-d34c-4bc3-9a60-3249c62b18ac.png)
 
