@@ -1,31 +1,90 @@
-package com.example.Calog;
+# Take photos and save gallery
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
+![](/screenshot/demo.gif)
 
-import android.Manifest;
-import android.app.Activity;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.Toast;
+## Request the camera and Storage feature 
+在 `<manifest></manifest>` 標籤內添加以下內容。 
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+```xml
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+```
 
+在 AndroidManifest.xml 文件中的 `<application></application>` 標籤內添加以下標籤。注意 `android:authorities` 這項屬性的 `XXX.android.fileprovider` 其中 XXX 是你的專案的前綴(不包含檔名)。
+
+![](/screenshot/img01.png)
+
+```xml
+<provider
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="com.example.android.fileprovider"
+    android:exported="false"
+    android:grantUriPermissions="true">
+    <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/file_paths"></meta-data>
+</provider>
+```
+
+如果您的應用以Android 10（API級別29）為目標平台，請停用分區存儲。使更高版本 SDK 能相容。
+
+```xml
+<manifest ... >
+<!-- This attribute is "false" by default on apps targeting
+     Android 10 or higher. -->
+  <application android:requestLegacyExternalStorage="true" ... >
+    ...
+  </application>
+</manifest>
+```
+
+> 當您將應用更新為以Android 11（API級別30）為目標平台後，如果應用在搭載Android 11的設備上運行，系統會忽略requestLegacyExternalStorage屬性，因此您的應用必須做好支持分區存儲並為這些設備上的用戶遷移應用數據的準備。
+
+[參考](https://developer.android.com/training/data-storage/use-cases?hl=zh-cn#migrate-legacy-storage)
+
+## Layout
+開啟 activity_main.xml 加入一個 ImageView 並將 id 命名為 displayImageView 與 Button 按鈕 id 命名 cameraBtn。
+
+![](/screenshot/img02.png)
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/displayImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23000002"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/cameraBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+## Take a photo with a camera app and save image to gallery
+
+```java
 public class MainActivity extends AppCompatActivity {
 
     public static final int CAMERA_PERM_CODE = 101;
@@ -136,5 +195,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }
+```

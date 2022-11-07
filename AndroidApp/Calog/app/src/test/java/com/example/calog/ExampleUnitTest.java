@@ -1,4 +1,4 @@
-package com.example.calog;
+package com.example.Calog;
 
 import org.junit.Test;
 
