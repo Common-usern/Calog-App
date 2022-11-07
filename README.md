@@ -24,6 +24,26 @@ UI:
 
 
 Backend:
+
+ML model is trained on Food101 dataset (https://www.kaggle.com/datasets/dansbecker/food-101). This dataset has 101000 images in total. It's a food dataset with 101 categories(multiclass)
+
 AWS:
-![ML model deployed on AWS](https://user-images.githubusercontent.com/69532082/200314244-80f03b4b-025b-466c-9aeb-892d1f22e848.jpg)
-![VM on AWS](https://user-images.githubusercontent.com/69532082/200314321-a3f8bbbe-0bb2-4f3e-a000-0a67cd4bebd3.jpg)
+1. AWS VM
+
+    ![VM on AWS](https://user-images.githubusercontent.com/69532082/200314321-a3f8bbbe-0bb2-4f3e-a000-0a67cd4bebd3.jpg)
+
+2. Model Deployment on AWS
+    ![ML model deployed on AWS](https://user-images.githubusercontent.com/69532082/200314244-80f03b4b-025b-466c-9aeb-892d1f22e848.jpg)
+    
+Image for Testing:
+
+    ![salad](https://user-images.githubusercontent.com/69532082/200321042-aa47d2cf-013b-4f5a-aa1c-277c4487d778.jpg)
+
+Result processed on AWS and returned to mobile:
+
+    ![prediction](https://user-images.githubusercontent.com/69532082/200321176-3383f0eb-4885-41cc-a8d6-6d7925047b1c.png)
+
+
+
+
+
