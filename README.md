@@ -36,7 +36,8 @@ AWS:
     ![ML model deployed on AWS](https://user-images.githubusercontent.com/69532082/200314244-80f03b4b-025b-466c-9aeb-892d1f22e848.jpg)
     
 Image for Testing:
-    ![salad](https://user-images.githubusercontent.com/69532082/200321818-a0924125-dda9-4ab8-9adb-bca8277ab3a6.jpg)
+
+   ![salad](https://user-images.githubusercontent.com/69532082/200321818-a0924125-dda9-4ab8-9adb-bca8277ab3a6.jpg)
 
     
 
