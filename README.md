@@ -1,7 +1,7 @@
 # Calog-App
 Proof of concept for Calorie measurement app
 
-UI:
+## UI:
 1. Welcome Screen
 
     ![login](https://user-images.githubusercontent.com/69532082/200303629-2eb609c7-3f53-44a4-abbd-2782d301b70a.png)
@@ -23,7 +23,7 @@ UI:
     ![fav](https://user-images.githubusercontent.com/69532082/200303697-6caaa8ad-effa-41f3-afde-f96dcd001b24.png)
 
 
-Backend:
+## Backend:
 
 ML model is trained on Food101 dataset (https://www.kaggle.com/datasets/dansbecker/food-101). This dataset has 101000 images in total. It's a food dataset with 101 categories(multiclass)
 
