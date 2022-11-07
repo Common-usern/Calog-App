@@ -21,3 +21,9 @@ UI:
 5. Saved Food Calorie Measurements
 
     ![fav](https://user-images.githubusercontent.com/69532082/200303697-6caaa8ad-effa-41f3-afde-f96dcd001b24.png)
+
+
+Backend:
+AWS:
+![ML model deployed on AWS](https://user-images.githubusercontent.com/69532082/200314244-80f03b4b-025b-466c-9aeb-892d1f22e848.jpg)
+![VM on AWS](https://user-images.githubusercontent.com/69532082/200314321-a3f8bbbe-0bb2-4f3e-a000-0a67cd4bebd3.jpg)
