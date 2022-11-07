@@ -29,19 +29,23 @@ ML model is trained on Food101 dataset (https://www.kaggle.com/datasets/dansbeck
 
 AWS:
 1. AWS VM
-
-    ![VM on AWS](https://user-images.githubusercontent.com/69532082/200314321-a3f8bbbe-0bb2-4f3e-a000-0a67cd4bebd3.jpg)
+ 
+    ![VM on AWS](https://user-images.githubusercontent.com/69532082/200321756-e6ea924b-3675-4470-8ce2-0d60c734b4ea.jpg)
 
 2. Model Deployment on AWS
     ![ML model deployed on AWS](https://user-images.githubusercontent.com/69532082/200314244-80f03b4b-025b-466c-9aeb-892d1f22e848.jpg)
     
 Image for Testing:
+    ![salad](https://user-images.githubusercontent.com/69532082/200321818-a0924125-dda9-4ab8-9adb-bca8277ab3a6.jpg)
 
-    ![salad](https://user-images.githubusercontent.com/69532082/200321042-aa47d2cf-013b-4f5a-aa1c-277c4487d778.jpg)
+    
 
 Result processed on AWS and returned to mobile:
 
-    ![prediction](https://user-images.githubusercontent.com/69532082/200321176-3383f0eb-4885-41cc-a8d6-6d7925047b1c.png)
+   ![prediction](https://user-images.githubusercontent.com/69532082/200321965-10411053-481b-4c05-ab16-28f3866f64fd.png)
+
+    
+
 
 
 
